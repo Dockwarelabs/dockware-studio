@@ -219,6 +219,17 @@ select.btn-ui{max-width:190px}
 .site-footer a{text-decoration:underline}
 .wa{position:sticky;bottom:14px;float:right;margin-right:14px;margin-top:-64px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:white;font-size:19px;font-weight:900;box-shadow:0 10px 24px rgba(0,0,0,.25)}
 
+/* Interaction polish — a live site should feel alive, not a static mockup */
+.site-btn{transition:transform .15s ease,box-shadow .15s ease}
+.site-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(0,0,0,.4)}
+.site-btn:active{transform:translateY(0)}
+.nav-cta{transition:transform .15s ease,box-shadow .15s ease}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 18px -8px rgba(0,0,0,.35)}
+.site:not(.basic) .product,.site:not(.basic) .why-item{transition:transform .2s ease,box-shadow .2s ease}
+.site:not(.basic) .product:hover,.site:not(.basic) .why-item:hover{transform:translateY(-3px);box-shadow:0 16px 32px -18px rgba(0,0,0,.28)}
+.wa{transition:transform .2s ease}
+.wa:hover{transform:scale(1.08)}
+
 /* ============================================================
    TIER STRUCTURE ARCHETYPES — genuinely different composition
    per tier (not just scale). Applied on top of each design's own
@@ -284,12 +295,10 @@ select.btn-ui{max-width:190px}
    ============================================================ */
 .site.premium .hero h1{letter-spacing:-.035em}
 .site.premium .site-section h2{letter-spacing:-.015em}
-.site.premium .hero-media:not(:has(img)),
-.site.premium .product-img:not(:has(img)){
+.site .hero-media:not(:has(img)),
+.site .product-img:not(:has(img)){
   background:linear-gradient(150deg,var(--card),var(--media));
-  position:relative;
 }
-.site.premium .hero-media:not(:has(img))::after{content:'Your photo here — real product/business photography goes a long way';font-size:11px;padding:0 30px;text-align:center;font-style:italic;opacity:.75}
 .site.premium .product,.site.premium .why-item,.site.premium .quote{box-shadow:0 10px 30px -14px rgba(0,0,0,.18)}
 .site.basic .product,.site.basic .why-item{box-shadow:none}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
